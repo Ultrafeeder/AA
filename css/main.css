@@ -53,6 +53,15 @@ logo {
 .aaLogo{
   margin-top: 10%;
 }
+/* footer {
+    position: sticky;
+    top: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 60px;
+    padding-bottom: 30px;
+} */
 .footer-container {
     position: fixed;
     height: 60px;
