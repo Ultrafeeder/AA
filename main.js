@@ -1,3 +1,4 @@
+
 // // const request = require("request");
 // const http = require('http');
 // const express = require('express');
@@ -27,17 +28,17 @@
 
 // app.get();
 // app.post();
-function search() {
-    document.getElementById('results').innerHTML = "";
-    fetch("http://openlibrary.org/search.json?q=" + document.getElementById("search").value)
-        .then(a => a.json())
-        .then(response => {
-            console.log(response)
-            for (let i = 0; i < 25; i++) {
-                document.getElementById('results').innerHTML += "<h2>" + response.docs[i].title + "</h2>" + response.docs[i].author_name[0] + "<br><img src=http://covers.openlibrary.org/b/isbn/" + response.docs[i].isbn[0] + ".jpeg>"
-            }
-    })
-}
+// function search() {
+//     document.getElementById('results').innerHTML = "";
+//     fetch("http://openlibrary.org/search.json?q=" + document.getElementById("search").value)
+//         .then(a => a.json())
+//         .then(response => {
+//             console.log(response)
+//             for (let i = 0; i < 25; i++) {
+//                 document.getElementById('results').innerHTML += "<h2>" + response.docs[i].title + "</h2>" + response.docs[i].author_name[0] + "<br><img src=http://covers.openlibrary.org/b/isbn/" + response.docs[i].isbn[0] + ".jpeg>"
+//             }
+//     })
+// }
 
 // let type = 'title';
 // let value = 'giver';
@@ -45,3 +46,17 @@ function search() {
 
 // // fetch(readAPI);
 
+const mainMenu = document.querySelector('.mainMenu');
+const closeMenu = document.querySelector('.closeMenu');
+const openMenu = document.querySelector('.openMenu');
+
+openMenu.addEventListener('click',show);
+closeMenu.addEventListener('click',close);
+
+function show(){
+    mainMenu.style.display = 'flex';
+    mainMenu.style.top = '0';
+}
+function close(){
+    mainMenu.style.top = '-100%';
+}
