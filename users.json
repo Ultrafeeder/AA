@@ -1,0 +1,10 @@
+{
+    "user": [
+        {"name":"Human Bean",
+         "email":"therealhumanbean@gmail.com",
+         "password":"anthrope",
+         "id": 1
+        }
+
+    ]
+}

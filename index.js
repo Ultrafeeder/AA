@@ -1,14 +1,35 @@
-import fetch from "node-fetch";
-import express from "express";
-import bodyParser from "body-parser";
+const fs = require('fs')
+const http = require('http')
+const data = require('./users.json')
+const express = require('express')
+const bodyParser = require('body-parser')
 const app = express();
-// const nodeFetch = require('node-fetch')
 
-let response = fetch("http://openlibrary.org/search.json?q=the+giver").then(response => response.json())
+app.use(express.json())
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
-    console.log(response)
-app.get('/books', (req, res) => {
-    
+app.get('/user', (req, res) => {
+    let eData = JSON.stringify(data)
+    res.send(eData);
+})
+
+app.post('/user', (req, res) => {
+    const eData = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        id: data.user.length + 1
+    }
+    if (!eData) {
+        res.status(404).send('invalid user')
+    } else {
+        data.user.push(eData);
+        res.send(eData);
+        console.log(eData)
+    }
+return
 })
 
 const port = 3000;
