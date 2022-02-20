@@ -1,16 +1,18 @@
-// const express = require('express');
-// const bodyParser = require('body-parser');
-// const app = express();
-const nodeFetch = require('node-fetch')
-// const port = 3000;
-let response = fetch("http://openlibrary.org/search.json?q=the+giver").then(response => response.json()).then(data => console.log(data))
+import fetch from "node-fetch";
+import express from "express";
+import bodyParser from "body-parser";
+const app = express();
+// const nodeFetch = require('node-fetch')
 
-console.log(response);
-// app.get('/', (req, res) => {
-//     res.send('trying to get books?')
-// })
+let response = fetch("http://openlibrary.org/search.json?q=the+giver").then(response => response.json())
 
-// app.listen(port, () => console.log(`Hello from ${port}`))
+    console.log(response)
+app.get('/books', (req, res) => {
+    
+})
+
+const port = 3000;
+app.listen(port, () => console.log(`Hello from ${port}`))
 
 
 // const openLibrary = "https://openlibrary.org/api/books?bibkeys=ISBN:0451526538&callback=mycallback";
