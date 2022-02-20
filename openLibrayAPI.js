@@ -13,7 +13,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/book', (req, res) => {
+    const book = req.body;
 
+    console.log(book);
+    books.push(book);
+
+    res.send('Book is added to the database')
 })
 
 app.listen(port, () => console.log(`hello from ${port}`));
