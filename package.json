@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "cross-fetch": "^3.1.5",
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "ascension-archive",
+  "description": "Ascension Archive, our way of trying to preserve free and easy access to works in the public domain. This web based application features a search functionality that lets users sift through a wide collection of books with viewing capability as well.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ultrafeeder/AA.git"
+  },
+  "keywords": [
+    "books",
+    "library"
+  ],
+  "author": "Jakari Axel Isaac Jorge Brian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ultrafeeder/AA/issues"
+  },
+  "homepage": "https://github.com/Ultrafeeder/AA#readme"
+}
