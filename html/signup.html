@@ -17,11 +17,12 @@
         <li><a href="advanced.html">Advanced Search</a></li>
         <li><a href="results.html">Results</a></li>
         <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Log In</a></li>
         <div class="closeMenu"><i class="fa fa-times"></i></div>
     </ul>
 </nav>
     <logo>
-        <a href="#"><img src="/images/aaLogo.png" class="aaLogo"></a>
+        <a href="index.html"><img src="/images/aaLogo.png" class="aaLogo"></a>
     </logo>
     <div class="boxContainer">
         <table class="elementContainer">
@@ -36,17 +37,23 @@
         </table>
     </div>
     <section class="contact-container">
-        <form class="content-box">
-            <!-- <div class="left"></div> -->
+        <div class="content-box">
+            <form>
+                <!-- <div class="left"></div> -->
+                <div class="right">
+                    <h2>Sign Up</h2>
+                    <input type="text" class="field" placeholder="Full Name" required>
+                    <input type="email" class="field" placeholder="Email" required>
+                    <input type="text" class="field" placeholder="Password" required>
+                    <input type="text" class="field" placeholder="Confirm Password" required>
+                    <button class="contact-btn">Sign Up</button>
+                </div>
+            </form>
+            <div class="separator">OR</div>
             <div class="right">
-                <h2>Sign Up</h2>
-                <input type="text" class="field" placeholder="Full Name" required>
-                <input type="email" class="field" placeholder="Email" required>
-                <input type="text" class="field" placeholder="Password" required>
-                <input type="text" class="field" placeholder="Confirm Password" required>
-                <button class="contact-btn">Submit</button>
-            </div>
-        </form>
+                <a href="login.html"><button class="regist-btn" href="login.html">Login</button></a>
+                </div>
+        </div>
     </section>
     <footer class="footer-container">
         <p>Copyright © 2021 AA, <i>All Rights Reserved</i></p>
