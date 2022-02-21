@@ -1,21 +1,34 @@
-const fs = require('fs')
-const http = require('http')
-const data = require('./users.json')
-const express = require('express')
-const bodyParser = require('body-parser')
+const axios = require('axios').default;
+const data = require('./users.json');
+const express = require('express');
+const path = require('path');
+const http = require('http');
+require("dotenv").config();
 const app = express();
 
-app.use(express.json())
-app.use(bodyParser.urlencoded({
-    extended: true
-}))
+http.Server(app);
+app.use(express.json());
 
-app.get('/user', (req, res) => {
-    let eData = JSON.stringify(data)
-    res.send(eData);
+app.use(express.static(path.join(__dirname, "/html")));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/html/index.html'));
 })
-
-app.post('/user', (req, res) => {
+app.get('/advanced', (req, res) => {
+    res.sendFile(path.join(__dirname, '/html/advanced.html'));
+})
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '/html/login.html'));
+})
+app.get('/signup', (req, res) => {
+    res.sendFile(path.join(__dirname, '/html/signup.html'));
+})
+// app.get('/', (req, res) => {
+//     let eData = JSON.stringify(data)
+//     res.send(eData);
+// })
+function signup() {
+    app.post('/', (req, res) => {
     const eData = {
         name: req.body.name,
         email: req.body.email,
@@ -31,6 +44,8 @@ app.post('/user', (req, res) => {
     }
 return
 })
+}
+
 
 const port = 3000;
 app.listen(port, () => console.log(`Hello from ${port}`))
@@ -40,17 +55,17 @@ app.listen(port, () => console.log(`Hello from ${port}`))
 
 // app.get();
 // app.post();
-// function search() {
-//     document.getElementById('results').innerHTML = "";
-//     fetch("http://openlibrary.org/search.json?q=" + document.getElementById("search").value)
-//         .then(a => a.json())
-//         .then(response => {
-//             console.log(response)
-//             for (let i = 0; i < 25; i++) {
-//                 document.getElementById('results').innerHTML += "<h2>" + response.docs[i].title + "</h2>" + response.docs[i].author_name[0] + "<br><img src=http://covers.openlibrary.org/b/isbn/" + response.docs[i].isbn[0] + ".jpeg>"
-//             }
-//     })
-// }
+function search() {
+    document.getElementById('results').innerHTML = "";
+    fetch("http://openlibrary.org/search.json?q=" + document.getElementById("search").value)
+        .then(a => a.json())
+        .then(response => {
+            console.log(response)
+            for (let i = 0; i < 25; i++) {
+                document.getElementById('results').innerHTML += "<h2>" + response.docs[i].title + "</h2>" + response.docs[i].author_name[0] + "<br><img src=http://covers.openlibrary.org/b/isbn/" + response.docs[i].isbn[0] + ".jpeg>"
+            }
+    })
+}
 
 // let type = 'title';
 // let value = 'giver';
