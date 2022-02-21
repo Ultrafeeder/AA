@@ -9,6 +9,7 @@
         <script src="/style.js"></script>
         <title>Ascension_Archive</title>
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/search.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     </head>
     <body>
@@ -33,26 +34,22 @@
                 <br>
                 <p>Ascension Archive, our way of trying to preserve free and easy access to works in the public domain. This web based application features a search functionality that lets users sift through a wide collection of books with viewing capability as well.</p>
             </div>
-        <div class="boxContainer">
-            <table class="elementContainer">
-                <tr>
-                    <td>
-                        <input type="text" placeholder="What are you looking for?" id="searchBar" class="search">
-                    </td>
-                    <td>
-                        <div id="searchIconImg" class="btn">
-                            <p>Search</p>
-                        </div>
-                    </td>
-                    <td class="searchIconWeb">
-                        <a href="#"><img src="/images/searchIcon.png" id="searchIconImg" class="searchIcon"></a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        
+            <div class="wrapper">
+                <div class="search-input">
+                  <a href="" target="_blank" hidden></a>
+                  <input type="text" placeholder="What are you looking for?">
+                  <div class="autocom-box">
+                  </div>
+                  <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+              </div>
+
         <footer class="footer-container">
             <p>Copyright © 2021 AA, <i>All Rights Reserved</i></p>
         </footer>
+        <script src="/suggestions.js"></script> 
+     <script src="/search.js"></script> 
         <script>
             const mainMenu = document.querySelector('.mainMenu');
             const closeMenu = document.querySelector('.closeMenu');
