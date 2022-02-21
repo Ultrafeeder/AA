@@ -60,9 +60,9 @@ const loginFunc = (event) => {
 
 // CLICK EVENT LISTENERS
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.contact-btn').addEventListener('click', addUserData)
+    document.querySelector('#signUpButton').addEventListener('click', addUserData)
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#login-btn').addEventListener('click', loginFunc)
+    document.querySelector('#loginButton').addEventListener('click', loginFunc)
 });
