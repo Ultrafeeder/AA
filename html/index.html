@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <script src="/main.js"></script>
-        <script src="/style.js"></script>
-        <title>Ascension_Archive</title>
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
-    </head>
-    <body>
-        <nav>
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="mainMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="advanced.html">Advanced Search</a></li>
-                <li><a href="results.html">Results</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <div class="closeMenu"><i class="fa fa-times"></i></div>
-            </ul>
-        </nav>
-        <logo>
-            <a href="index.html"><img src="/images/aaLogo.png" class="aaLogo"></a>
-        </logo>
-        <div class="boxContainer">
-            <table class="elementContainer">
-                <tr>
-                    <td>
-                        <input type="text" placeholder="What are you looking for?" class="search">
-                    </td>
-                    <td>
-                        <a href="#"><img src="/images/searchIcon.png" class="searchIcon"></a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <footer class="footer-container">
-            <p>Copyright © 2021 AA, <i>All Rights Reserved</i></p>
-        </footer>
-        <script>
-            const mainMenu = document.querySelector('.mainMenu');
-            const closeMenu = document.querySelector('.closeMenu');
-            const openMenu = document.querySelector('.openMenu');
-            
-            openMenu.addEventListener('click',show);
-            closeMenu.addEventListener('click',close);
-            
-            function show(){
-            mainMenu.style.display = 'flex';
-            mainMenu.style.top = '0';
-            }
-            function close(){
-            mainMenu.style.top = '-100%';
-            }
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/index.js"></script>
+    <script src="/style.js"></script>
+    <title>Ascension_Archive</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+</head>
+<body>
+    <nav>
+    <div class="openMenu"><i class="fa fa-bars"></i></div>
+    <ul class="mainMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="advanced.html">Advanced Search</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <div class="closeMenu"><i class="fa fa-times"></i></div>
+    </ul>
+</nav>
+    <logo>
+        <a href="index.html"><img src="/images/aaLogo.png" class="aaLogo"></a>
+    </logo>
+    <div class="boxContainer">
+        <table class="elementContainer">
+            <tr>
+                <td>
+                    <input type="text" placeholder="What are you looking for?" class="search">
+                </td>
+                <td>
+                    <a href="#" onclick="search()"><img src="/images/searchIcon.png" class="searchIcon"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer class="footer-container">
+        <p>Copyright © 2021 AA, <i>All Rights Reserved</i></p>
+    </footer>
+    <script>
+        const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click',close);
+        
+        function show(){
+        mainMenu.style.display = 'flex';
+        mainMenu.style.top = '0';
+        }
+        function close(){
+        mainMenu.style.top = '-100%';
+        }
+    </script>
+</body>
 </html>
